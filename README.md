@@ -77,3 +77,44 @@ El proyecto sigue una arquitectura por capas (Clean / Onion inspirada):
 ---
 
 ## Estructura del repositorio
+App-RealState-nousss/
+├── RealStateApp.Core.Domain/
+├── RealStateApp.Core.Application/
+├── RealStateApp.Infraestructure.Identity/
+├── RealStateApp.Infraestructure.Persistence/
+├── RealStateApp.Infraestructure.Shared/
+├── RealStateApp/                  # MVC
+├── WebApi/                        # Web API
+└── RealStateApp.sln
+
+
+
+---
+
+## Cómo ejecutar el proyecto
+
+1. Clonar el repositorio:
+```bash
+git clone https://github.com/Kelvin-star07/App-RealState-nousss.git
+cd App-RealState-nousss
+
+Configurar la cadena de conexión de SQL Server en appsettings.json.
+Restaurar paquetes y aplicar migraciones:
+
+Bashdotnet restore
+dotnet ef database update
+
+
+Ejecutar la aplicación MVC y/o la Web API desde Visual Studio o con:
+
+Bashdotnet run --project RealStateApp
+dotnet run --project WebApi
+
+
+Autor
+Kelvin José Diaz Ramírez
+Proyecto académico grupal – Instituto Tecnológico de las Américas (ITLA)
+
+Notas
+Este repositorio es un fork personal del proyecto original.
+En él se destacan especialmente las funcionalidades de favoritos, chat (lado cliente) y sistema de ofertas que desarrollé.
